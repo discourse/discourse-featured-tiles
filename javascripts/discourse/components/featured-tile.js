@@ -11,7 +11,6 @@ export default Component.extend({
   srcset(thumbnails) {
     return this.responsiveRatios
       .map((ratio) => {
-        const target = ratio * this.displayHeight;
         const match = this.findBest(
           ratio * this.displayHeight,
           ratio * this.displayWidth
