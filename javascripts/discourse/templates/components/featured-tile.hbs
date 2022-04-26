@@ -1,7 +1,15 @@
 <a href={{url}}>
   {{#if topic.thumbnails}}
-    <img src={{fallbackSrc}} srcset={{srcset}} width={{width}} height={{height}} loading="lazy" class="topic-tile-thumbnail">
+    <img
+      src={{fallbackSrc}}
+      srcset={{srcset}}
+      width={{width}}
+      height={{height}}
+      loading="lazy"
+      class="topic-tile-thumbnail"
+    >
   {{/if}}
+
   <div class="topic-info">
     <span class="topic-title">{{topic.title}}</span>
     <span class="author">
@@ -9,6 +17,5 @@
         {{avatar topic.creator imageSize="large"}}
       {{/user-link}}
     </span>
-    
   </div>
 </a>

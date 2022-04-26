@@ -13,7 +13,9 @@ export default {
         @observes("model.id")
         updateShowFeaturedTopicsBanner() {
           // debugger;
-          if (this.model.id !== User.current().id) return;
+          if (this.model.id !== User.current().id) {
+            return;
+          }
           this.set(
             "model.show_featured_topics_banner",
             this.storedFeaturedTopicsValue()
@@ -22,16 +24,21 @@ export default {
 
         storedFeaturedTopicsValue() {
           let val = window.localStorage.getItem("show_featured_topics_banner");
-          if (val === "false") val = false;
-          if (val === null) val = true;
+          if (val === "false") {
+            val = false;
+          }
+          if (val === null) {
+            val = true;
+          }
           return !!val;
         },
 
         actions: {
           save() {
             this._super();
-            debugger;
-            if (this.model.id !== User.current().id) return;
+            if (this.model.id !== User.current().id) {
+              return;
+            }
             if (
               this.storedFeaturedTopicsValue() !==
               this.model.show_featured_topics_banner

@@ -8,7 +8,7 @@ export default Component.extend({
   displayWidth: 200,
 
   @discourseComputed("topic.thumbnails")
-  srcset(thumbnails) {
+  srcset() {
     return this.responsiveRatios
       .map((ratio) => {
         const match = this.findBest(
@@ -35,16 +35,20 @@ export default Component.extend({
     return original.height;
   },
 
-  @discourseComputed("thumbnails")
+  @discourseComputed("topic.thumbnails")
   fallbackSrc() {
     return this.findBest(this.displayWidth, this.displayHeight).url;
   },
 
   findBest(maxWidth, maxHeight) {
-    if (!this.topic.thumbnails) return;
+    if (!this.topic.thumbnails) {
+      return;
+    }
 
     const largeEnough = this.topic.thumbnails.filter((t) => {
-      if (!t.url) return false;
+      if (!t.url) {
+        return false;
+      }
       return t.max_width >= maxHeight;
     });
 

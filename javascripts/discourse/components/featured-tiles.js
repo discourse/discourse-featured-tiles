@@ -1,5 +1,4 @@
-import discourseComputed from "discourse-common/utils/decorators";
-import { observes } from "discourse-common/utils/decorators";
+import discourseComputed, { observes } from "discourse-common/utils/decorators";
 import Component from "@ember/component";
 import { next } from "@ember/runloop";
 import { inject as service } from "@ember/service";
@@ -65,7 +64,9 @@ export default Component.extend({
 
   @discourseComputed("list.topics")
   filteredTopics(topics) {
-    if (!topics) return;
+    if (!topics) {
+      return;
+    }
     if (settings.randomize_topics) {
       topics = shuffle(topics);
     }
@@ -88,11 +89,17 @@ export default Component.extend({
       return false;
     }
 
-    if (isMobile && !settings.display_mobile) return false;
-    if (settings.display_when_unfiltered && !viewingCategoryId) return true;
+    if (isMobile && !settings.display_mobile) {
+      return false;
+    }
+    if (settings.display_when_unfiltered && !viewingCategoryId) {
+      return true;
+    }
 
     if (settings.display_on_categories && viewingCategoryId) {
-      if (displayCategories.length === 0) return true;
+      if (displayCategories.length === 0) {
+        return true;
+      }
       return displayCategories.includes(viewingCategoryId);
     }
     return false;
