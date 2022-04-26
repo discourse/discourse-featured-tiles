@@ -6,8 +6,10 @@ export default {
   name: "discourse-featured-tiles",
 
   initialize() {
-    withPluginApi("0.8.9", api => {
+    withPluginApi("0.8.9", (api) => {
       api.modifyClass("controller:preferences/interface", {
+        pluginId: this.name,
+
         @observes("model.id")
         updateShowFeaturedTopicsBanner() {
           // debugger;
@@ -43,9 +45,9 @@ export default {
                 );
               }
             }
-          }
-        }
+          },
+        },
       });
     });
-  }
+  },
 };

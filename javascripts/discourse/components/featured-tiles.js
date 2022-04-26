@@ -82,7 +82,7 @@ export default Component.extend({
       ![
         "discovery.latest",
         "discovery.categories",
-        "discovery.latestCategory",
+        "discovery.category",
       ].includes(currentRouteName)
     ) {
       return false;
