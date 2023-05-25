@@ -8,7 +8,7 @@ const displayCategories = settings.display_categories
   .map((id) => parseInt(id, 10))
   .filter((id) => id);
 
-const featuredTags = settings.featured_tags.split("|");
+const featuredTags = settings.featured_tags.split("|").filter(Boolean);
 
 function shuffle(array) {
   array = [...array];
@@ -42,7 +42,12 @@ export default Component.extend({
   },
 
   loadTopics() {
-    const loadParams = { tags: featuredTags, period: settings.top_period };
+    const loadParams = { period: settings.top_period };
+
+    if (featuredTags.length) {
+      loadParams.tags = featuredTags;
+    }
+
     if (settings.featured_category > 0) {
       loadParams.category = settings.featured_category;
     }
