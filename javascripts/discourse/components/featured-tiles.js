@@ -1,7 +1,7 @@
-import discourseComputed, { observes } from "discourse-common/utils/decorators";
 import Component from "@ember/component";
 import { next } from "@ember/runloop";
-import { inject as service } from "@ember/service";
+import { service } from "@ember/service";
+import discourseComputed, { observes } from "discourse-common/utils/decorators";
 
 const displayCategories = settings.display_categories
   .split("|")
@@ -23,7 +23,7 @@ function shuffle(array) {
 }
 
 export default Component.extend({
-  router: service("router"),
+  router: service(),
 
   isLoading: true,
   classNameBindings: "isLoading",

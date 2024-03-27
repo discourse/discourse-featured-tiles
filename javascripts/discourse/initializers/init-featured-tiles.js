@@ -1,6 +1,6 @@
 import { withPluginApi } from "discourse/lib/plugin-api";
-import { observes } from "discourse-common/utils/decorators";
 import User from "discourse/models/user";
+import { observes } from "discourse-common/utils/decorators";
 
 export default {
   name: "discourse-featured-tiles",

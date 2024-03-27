@@ -3,7 +3,7 @@ en:
     description: Display a horizontal strip of featured topics above a category
     settings:
       featured_category: The category containing featured topics. Set to 0 for all categories. 'Scope to category' will override this setting.
-      featured_tags: The tag which contains the featured topics. This must be publically visible.
+      featured_tags: The tag which contains the featured topics. This must be publicly visible.
       topic_source: Which algorithm should be used to pick topics?
       top_period: The time period used when "topic_source" is set to "top"
       randomize_topics: Randomize the selection and ordering of topics?
