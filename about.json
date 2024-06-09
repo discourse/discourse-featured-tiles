@@ -1,7 +1,7 @@
 {
   "name": "Featured Tiles",
-  "about_url": null,
-  "license_url": null,
+  "about_url": "https://meta.discourse.org/t/featured-tiles/156677",
+  "license_url": "https://github.com/discourse/discourse-featured-tiles/blob/main/LICENSE",
   "component": true,
   "authors": "David Taylor",
   "modifiers": {
