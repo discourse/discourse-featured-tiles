@@ -5,3 +5,19 @@
 # https://translate.discourse.org/
 
 de:
+  theme_metadata:
+    description: Zeigen Sie einen horizontalen Streifen mit ausgewählten Themen über einer Kategorie an
+    settings:
+      featured_category: Die Kategorie, aus der die ausgewählten Themen stammen. Setze den Wert auf 0, um alle Kategorien einzuschließen. 'Scope to category' überschreibt diese Einstellung.
+      featured_tags: Das Schlagwort, aus dem die ausgewählten Themen stammen. Dieses muss öffentlich sichtbar sein.
+      topic_source: Welcher Algorithmus soll für die Themenauswahl verwendet werden?
+      top_period: Der verwendete Zeitraum, wenn „topic_source“ auf „top“ eingestellt ist
+      randomize_topics: Soll die Auswahl und Reihenfolge der Themen zufällig erfolgen?
+      maximum_topic_count: Die maximale Anzahl von Themen, die angezeigt werden sollen
+      display_when_unfiltered: Auf der ungefilterten Aktuell-Seite anzeigen?
+      display_on_categories: Auf Kategorieseiten anzeigen?
+      display_categories: Zeigt die Kacheln an, wenn diese Kategorien angezeigt werden. Leer für alle Kategorien
+      scope_to_category: Themen nach aktueller Kategorie filtern?
+      display_mobile: Auf Mobilgeräten anzeigen?
+  preference_header: Banner mit ausgewählten Themen
+  preference_description: Banner mit ausgewählten Themen auf diesem Gerät anzeigen
