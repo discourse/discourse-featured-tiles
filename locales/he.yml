@@ -5,3 +5,19 @@
 # https://translate.discourse.org/
 
 he:
+  theme_metadata:
+    description: הצגת פס אופקי של נושאים מובילים מעל לקטגוריה
+    settings:
+      featured_category: הקטגוריה מכילה נושאים מובילים. יש להגדיר ל־0 לכל הקטגוריות. ‚טווח לקטגוריה’ ידרוס את ההגדרה הזאת.
+      featured_tags: התגית שמכילה את הנושאים המובילים. חייבת להיות גלויה לציבור.
+      topic_source: באיזה אלגוריתם להשתמש כדי לבחור נושאים?
+      top_period: פרק הזמן לשימוש כאשר „topic_source” (מקור נושא) מוגדר ל־„top” (עליון)
+      randomize_topics: הבחירה וסידור הנושאים יהיו אקראיים?
+      maximum_topic_count: מספר הנושאים המרבי להצגה
+      display_when_unfiltered: להציג בעמוד העדכניים ביותר ללא סינון?
+      display_on_categories: להציג בעמוד הקטגוריות?
+      display_categories: להציג את האריחים בעת הצגת הקטגוריות האלה. ריק יציג את כולן.
+      scope_to_category: לסנן נושאים לקטגוריה הנוכחית?
+      display_mobile: להציג במכשירים ניידים?
+  preference_header: כרזת נושאים מובילים
+  preference_description: הצגת כרזת נושאים מובילים במכשיר הזה
