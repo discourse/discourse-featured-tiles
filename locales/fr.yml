@@ -5,3 +5,19 @@
 # https://translate.discourse.org/
 
 fr:
+  theme_metadata:
+    description: Afficher une bande horizontale de sujets en vedette au-dessus d'une catégorie
+    settings:
+      featured_category: La catégorie contenant les sujets en vedette. Réglez sur 0 pour toutes les catégories. « Étendue à la catégorie » remplacera ce paramètre.
+      featured_tags: L'étiquette qui contient les sujets en vedette. Cela doit être visible publiquement.
+      topic_source: Quel algorithme faut-il utiliser pour sélectionner les sujets ?
+      top_period: La période utilisée lorsque « topic_source » est réglé sur « top »
+      randomize_topics: Randomiser la sélection et l'ordre des sujets ?
+      maximum_topic_count: Le nombre maximum de sujets à afficher
+      display_when_unfiltered: Afficher sur la dernière page non filtrée ?
+      display_on_categories: Afficher sur les pages de catégories ?
+      display_categories: Afficher les vignettes lors de la visualisation de ces catégories. Laisser vide pour toutes les catégories
+      scope_to_category: Filtrer les sujets dans la catégorie actuelle ?
+      display_mobile: Afficher sur les appareils mobiles ?
+  preference_header: Bannière des sujets en vedette
+  preference_description: Afficher la bannière des sujets en vedette sur cet appareil

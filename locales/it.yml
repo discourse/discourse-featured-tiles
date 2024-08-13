@@ -5,3 +5,19 @@
 # https://translate.discourse.org/
 
 it:
+  theme_metadata:
+    description: Visualizza una striscia orizzontale di argomenti in primo piano sopra una categoria
+    settings:
+      featured_category: La categoria contenente gli argomenti in primo piano. Imposta su 0 per tutte le categorie. Il valore di "Ambito alla categoria" sovrascriverà questa impostazione.
+      featured_tags: L'etichetta che contiene gli argomenti in primo piano. Questo valore deve essere pubblicamente visibile.
+      topic_source: Quale algoritmo dovrebbe essere utilizzato per scegliere gli argomenti?
+      top_period: Il periodo di tempo utilizzato quando "topic_source" è impostato su "top"
+      randomize_topics: Randomizzare la selezione e l'ordinamento degli argomenti?
+      maximum_topic_count: Il numero massimo di argomenti da visualizzare
+      display_when_unfiltered: Visualizzare sull'ultima pagina non filtrata?
+      display_on_categories: Visualizzare nelle pagine delle categorie?
+      display_categories: Visualizza i riquadri quando visualizzi queste categorie. Vuoto per tutte le categorie
+      scope_to_category: Filtrare gli argomenti nella categoria corrente?
+      display_mobile: Visualizzazione su dispositivi mobili?
+  preference_header: Banner degli argomenti in primo piano
+  preference_description: Mostra il banner degli argomenti in primo piano su questo dispositivo

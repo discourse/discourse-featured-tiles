@@ -5,3 +5,19 @@
 # https://translate.discourse.org/
 
 ja:
+  theme_metadata:
+    description: カテゴリの上に注目のトピックを横並びに表示します
+    settings:
+      featured_category: 注目のトピックを含むカテゴリ。0 に設定するとすべてのカテゴリになります。「カテゴリの範囲」はこの設定をオーバーライドします。
+      featured_tags: 注目のトピックを含むタグ。これは公開されている必要があります。
+      topic_source: トピックの選択にはどのアルゴリズムを使用すべきですか？
+      top_period: '「topic_source」が「top」に設定されている場合に使用される期間'
+      randomize_topics: トピックの選択と順序をランダム化しますか？
+      maximum_topic_count: 表示するトピックの最大数
+      display_when_unfiltered: フィルタされていない最新のページに表示しますか？
+      display_on_categories: カテゴリページに表示しますか？
+      display_categories: これらのカテゴリを表示する際にタイルを表示する。すべてのカテゴリの場合は空白
+      scope_to_category: トピックを現在のカテゴリにフィルタリングしますか？
+      display_mobile: モバイルデバイスに表示しますか？
+  preference_header: 注目のトピックのバナー
+  preference_description: このデバイスで注目のトピックのバナーを表示します

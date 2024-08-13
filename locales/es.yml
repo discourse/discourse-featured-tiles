@@ -5,3 +5,19 @@
 # https://translate.discourse.org/
 
 es:
+  theme_metadata:
+    description: Mostrar una franja horizontal de temas destacados encima de una categoría
+    settings:
+      featured_category: La categoría que contiene los temas destacados. Establece 0 para todas las categorías. El «Alcance a la categoría» reemplazará este ajuste.
+      featured_tags: La etiqueta que contiene los temas destacados. Debe ser visible públicamente.
+      topic_source: '¿Qué algoritmo debe utilizarse para elegir los temas?'
+      top_period: El periodo de tiempo utilizado cuando «topic_source» está fijado en «top»
+      randomize_topics: '¿Aleatorizar la selección y el orden de los temas?'
+      maximum_topic_count: El número máximo de temas que se van a mostrar
+      display_when_unfiltered: '¿Mostrar en la última página sin filtrar?'
+      display_on_categories: '¿Mostrar en las páginas de categorías?'
+      display_categories: Mostrar los mosaicos al visualizar estas categorías. En blanco para todas las categorías
+      scope_to_category: '¿Filtrar temas a la categoría actual?'
+      display_mobile: '¿Mostrar en dispositivos móviles?'
+  preference_header: Banner de temas destacados
+  preference_description: Mostrar banner de temas destacados en este dispositivo

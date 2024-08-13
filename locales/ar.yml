@@ -5,3 +5,19 @@
 # https://translate.discourse.org/
 
 ar:
+  theme_metadata:
+    description: عرض شريط أفقي للموضوعات المميزة أعلى الفئة
+    settings:
+      featured_category: الفئة التي تحتوي على الموضوعات المميزة. اضبط القيمة على 0 لجميع الفئات. سيؤدي إعداد 'Scope to category' إلى تجاوز هذا الإعداد.
+      featured_tags: الوسم الذي تحتوي على الموضوعات المميزة. يجب أن يكون مرئيًا للعامة.
+      topic_source: ما الخوارزمية التي يجب استخدامها لاختيار الموضوعات؟
+      top_period: الفترة الزمنية المُستخدَمة عند تعيين "topic_source" إلى "top"
+      randomize_topics: هل تريد اختيار الموضوعات وترتيبها بشكلٍ عشوائي؟
+      maximum_topic_count: الحد الأقصى لعدد الموضوعات المُراد عرضها
+      display_when_unfiltered: هل تريد العرض على الصفحة الأخيرة التي لم تتم تصفيتها؟
+      display_on_categories: هل تريد العرض على صفحات الفئات؟
+      display_categories: عرض العناوين عند عرض هذه الفئات. فارغة لجميع الفئات
+      scope_to_category: هل تريد تصفية الموضوعات إلى الفئة الحالية؟
+      display_mobile: هل تريد العرض على أجهزة الجوَّال؟
+  preference_header: بانر الموضوعات المميزة
+  preference_description: عرض بانر الموضوعات المميزة على هذا الجهاز

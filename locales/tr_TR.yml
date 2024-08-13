@@ -5,3 +5,19 @@
 # https://translate.discourse.org/
 
 tr_TR:
+  theme_metadata:
+    description: Bir kategorinin üstünde öne çıkan konuların yatay bir şeridini göster
+    settings:
+      featured_category: Öne çıkan konuları içeren kategori. Tüm kategoriler için 0 olarak ayarlayın. "Kategoriye kapsam" bu ayarı geçersiz kılar.
+      featured_tags: Öne çıkan konuları içeren etiket. Bu herkes tarafından görülebilmelidir.
+      topic_source: Konuları seçmek için hangi algoritma kullanılmalıdır?
+      top_period: '"topic_source" "top" olarak ayarlandığında kullanılan zaman aralığı'
+      randomize_topics: Konuların seçimi ve sıralaması rastgele yapılsın mı?
+      maximum_topic_count: Görüntülenecek maksimum konu sayısı
+      display_when_unfiltered: Filtrelenmemiş son sayfada gösterilsin mi?
+      display_on_categories: Kategori sayfalarında gösterilsin mi?
+      display_categories: Bu kategorileri görüntülerken başlıkları göster. Tüm kategoriler için boş
+      scope_to_category: Konular mevcut kategoriye göre filtrelensin mi?
+      display_mobile: Mobil cihazlarda gösterilsin mi?
+  preference_header: Öne Çıkan Konular Banner'ı
+  preference_description: Bu cihazda öne çıkan konular başlığını göster

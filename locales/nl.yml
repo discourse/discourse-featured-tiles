@@ -5,3 +5,19 @@
 # https://translate.discourse.org/
 
 nl:
+  theme_metadata:
+    description: Geef een horizontale strook met uitgelichte topics weer boven een categorie
+    settings:
+      featured_category: De categorie met uitgelichte topics. Stel dit in op 0 voor alle categorieën. 'Scope to category' overschrijft deze instelling.
+      featured_tags: De tag die de uitgelichte topics bevat. Deze moet openbaar zichtbaar zijn.
+      topic_source: Welk algoritme moet worden gebruikt om topics te kiezen?
+      top_period: De tijdsperiode die wordt gebruikt als "topic_source" is ingesteld op "top"
+      randomize_topics: Willekeurige selectie en volgorde van topics?
+      maximum_topic_count: Het maximale aantal weer te geven topics
+      display_when_unfiltered: Weergeven op de ongefilterde pagina met nieuwste topics?
+      display_on_categories: Weergeven op categoriepagina's?
+      display_categories: Geef de tegels weer bij het bekijken van deze categorieën. Laat leeg voor alle categorieën
+      scope_to_category: Topics filteren op de huidige categorie?
+      display_mobile: Weergeven op mobiele apparaten?
+  preference_header: Banner met uitgelichte topics
+  preference_description: Banner met uitgelichte topics weergeven op dit apparaat

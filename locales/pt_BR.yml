@@ -5,3 +5,19 @@
 # https://translate.discourse.org/
 
 pt_BR:
+  theme_metadata:
+    description: Exibir uma listra horizontal de tópicos em destaque acima de uma categoria
+    settings:
+      featured_category: A categoria que contém tópicos em destaque. Defina para 0 para todas as subcategorias. Essa configuração é substituida por "Escopo da categoria".
+      featured_tags: A etiqueta que contém os tópicos em destaque. Deve ser visível publicamente.
+      topic_source: Qual algoritmo deve ser usado para escolha dos tópicos?
+      top_period: O período usado quando "topic_source" estiver definido como "top"
+      randomize_topics: Tornar aleatórios a seleçao e o ordenamento dos tópicos?
+      maximum_topic_count: A quantidade máxima de tópicos exibidos
+      display_when_unfiltered: Exibir na página de tópicos mais recentes não filtrados?
+      display_on_categories: Exibir na página de categorias?
+      display_categories: Exiba os tíbulos ao visualizar estas categorias. Vazio para todas as categorias
+      scope_to_category: Filtrar tópicos para categoria atual?
+      display_mobile: Exibir em dispositivos móveis?
+  preference_header: Banner de tópicos em destaque
+  preference_description: Exibir o banner de tópicos em destaque neste dispositivo

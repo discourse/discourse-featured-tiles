@@ -5,3 +5,19 @@
 # https://translate.discourse.org/
 
 zh_CN:
+  theme_metadata:
+    description: 在类别上方显示水平的精选话题条
+    settings:
+      featured_category: 包含精选话题的类别。为所有类别设置为 0。“范围限定为类别”将覆盖此设置。
+      featured_tags: 包含精选话题的标签。此标签必须公开可见。
+      topic_source: 应该使用哪种算法来选择话题？
+      top_period: 当“topic_source”设置为“top”时使用的时间段
+      randomize_topics: 是否随机选择话题和随机排序？
+      maximum_topic_count: 要显示的话题的最大数量
+      display_when_unfiltered: 是否显示在未筛选的最新页面上？
+      display_on_categories: 是否显示在类别页面上？
+      display_categories: 查看这些类别时显示图块。空白表示所有类别
+      scope_to_category: 是否根据当前类别筛选话题？
+      display_mobile: 是否在移动设备上显示？
+  preference_header: 精选话题横幅
+  preference_description: 在此设备上显示精选话题横幅

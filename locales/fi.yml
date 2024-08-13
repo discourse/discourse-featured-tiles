@@ -5,3 +5,19 @@
 # https://translate.discourse.org/
 
 fi:
+  theme_metadata:
+    description: Näytä vaakasuora nauha esitellyistä ketjuista alueen yläpuolella
+    settings:
+      featured_category: Esiteltyjä ketjuja sisältävä alue. 0 tarkoittaa kaikkia alueita. "Scope to category" ohittaa tämän asetuksen.
+      featured_tags: Tunniste, joka sisältää esitellyt ketjut. Tämän täytyy olla julkisesti näkyvillä.
+      topic_source: Mitä algoritmia tulisi käyttää ketjujen valintaan?
+      top_period: Ajanjakso, jota käytetään, kun "topic_source"-asetuksena on "top"
+      randomize_topics: Satunnaistetaanko ketjujen valinta ja järjestys?
+      maximum_topic_count: Näytettävien ketjujen enimmäismäärä
+      display_when_unfiltered: Näytetäänkö suodattamattomalla uusimmalla sivulla?
+      display_on_categories: Näytetäänkö aluesivuilla?
+      display_categories: Näytä ruudut, kun tarkastelet näitä alueita. Tyhjä tarkoittaa kaikkia alueita.
+      scope_to_category: Suodatetaanko ketjut nykyiseen alueeseen?
+      display_mobile: Näytetäänkö mobiililaitteilla?
+  preference_header: Esiteltyjen ketjujen banneri
+  preference_description: Näytä esiteltyjen ketjujen banneri tällä laitteella
