@@ -16,7 +16,7 @@ ar:
       maximum_topic_count: الحد الأقصى لعدد الموضوعات المُراد عرضها
       display_when_unfiltered: هل تريد العرض على الصفحة الأخيرة التي لم تتم تصفيتها؟
       display_on_categories: هل تريد العرض على صفحات الفئات؟
-      display_categories: عرض العناوين عند عرض هذه الفئات. فارغة لجميع الفئات
+      display_categories: عرض اللوحات عند عرض هذه الفئات. فارغة لجميع الفئات
       scope_to_category: هل تريد تصفية الموضوعات إلى الفئة الحالية؟
       display_mobile: هل تريد العرض على أجهزة الجوَّال؟
   preference_header: بانر الموضوعات المميزة
