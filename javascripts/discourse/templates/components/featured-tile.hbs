@@ -1,20 +1,20 @@
-<a href={{url}}>
-  {{#if topic.thumbnails}}
+<a href={{this.url}}>
+  {{#if this.topic.thumbnails}}
     <img
-      src={{fallbackSrc}}
-      srcset={{srcset}}
-      width={{width}}
-      height={{height}}
+      src={{this.fallbackSrc}}
+      srcset={{this.srcset}}
+      width={{this.width}}
+      height={{this.height}}
       loading="lazy"
       class="topic-tile-thumbnail"
     />
   {{/if}}
 
   <div class="topic-info">
-    <span class="topic-title">{{topic.title}}</span>
+    <span class="topic-title">{{this.topic.title}}</span>
     <span class="author">
-      {{#user-link user=topic.creator}}
-        {{avatar topic.creator imageSize="large"}}
+      {{#user-link user=this.topic.creator}}
+        {{avatar this.topic.creator imageSize="large"}}
       {{/user-link}}
     </span>
   </div>

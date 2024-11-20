@@ -1,6 +1,6 @@
-{{#if shouldDisplay}}
+{{#if this.shouldDisplay}}
   <div class="featured-tiles-container">
-    {{#each filteredTopics as |topic|}}
+    {{#each this.filteredTopics as |topic|}}
       {{featured-tile topic=topic}}
     {{/each}}
   </div>
