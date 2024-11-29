@@ -1,7 +1,9 @@
 import Component from "@ember/component";
 import { next } from "@ember/runloop";
 import { service } from "@ember/service";
-import discourseComputed, { observes } from "discourse-common/utils/decorators";
+import { classNameBindings } from "@ember-decorators/component";
+import { observes } from "@ember-decorators/object";
+import discourseComputed from "discourse-common/utils/decorators";
 
 const displayCategories = settings.display_categories
   .split("|")
@@ -22,24 +24,24 @@ function shuffle(array) {
   return array;
 }
 
-export default Component.extend({
-  router: service(),
+@classNameBindings("isLoading")
+export default class FeaturedTiles extends Component {
+  @service router;
 
-  isLoading: true,
-  classNameBindings: "isLoading",
+  isLoading = true;
 
   init() {
-    this._super();
+    super.init();
     this.set("isLoading", true);
     this.loadTopics();
-  },
+  }
 
   @observes("category")
   categoryChanged() {
     if (settings.scope_to_category) {
       this.loadTopics();
     }
-  },
+  }
 
   loadTopics() {
     const loadParams = { period: settings.top_period };
@@ -65,7 +67,7 @@ export default Component.extend({
         this.set("list", list);
         next(this, () => this.set("isLoading", false)); // Use `next` for CSS animation
       });
-  },
+  }
 
   @discourseComputed("list.topics")
   filteredTopics(topics) {
@@ -76,7 +78,7 @@ export default Component.extend({
       topics = shuffle(topics);
     }
     return topics.slice(0, settings.maximum_topic_count);
-  },
+  }
 
   @discourseComputed(
     "site.mobileView",
@@ -108,5 +110,5 @@ export default Component.extend({
       return displayCategories.includes(viewingCategoryId);
     }
     return false;
-  },
-});
+  }
+}
