@@ -3,7 +3,7 @@ import { next } from "@ember/runloop";
 import { service } from "@ember/service";
 import { classNameBindings } from "@ember-decorators/component";
 import { observes } from "@ember-decorators/object";
-import discourseComputed from "discourse-common/utils/decorators";
+import discourseComputed from "discourse/lib/decorators";
 
 const displayCategories = settings.display_categories
   .split("|")
