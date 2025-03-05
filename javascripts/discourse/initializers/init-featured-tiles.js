@@ -1,4 +1,4 @@
-import { observes } from "discourse/lib/decorators";
+import { observer } from "@ember/object";
 import { withPluginApi } from "discourse/lib/plugin-api";
 import User from "discourse/models/user";
 
@@ -10,8 +10,7 @@ export default {
       api.modifyClass("controller:preferences/interface", {
         pluginId: this.name,
 
-        @observes("model.id")
-        updateShowFeaturedTopicsBanner() {
+        updateShowFeaturedTopicsBanner: observer("model.id", function () {
           // debugger;
           if (this.model.id !== User.current().id) {
             return;
@@ -20,7 +19,7 @@ export default {
             "model.show_featured_topics_banner",
             this.storedFeaturedTopicsValue()
           );
-        },
+        }),
 
         storedFeaturedTopicsValue() {
           let val = window.localStorage.getItem("show_featured_topics_banner");
