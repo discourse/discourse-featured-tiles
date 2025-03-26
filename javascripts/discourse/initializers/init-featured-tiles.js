@@ -1,4 +1,5 @@
 import { observer } from "@ember/object";
+import { action } from "@ember/object";
 import { withPluginApi } from "discourse/lib/plugin-api";
 import User from "discourse/models/user";
 
@@ -31,29 +32,34 @@ export default {
           }
           return !!val;
         },
+      });
 
-        actions: {
-          save() {
-            this._super();
-            if (this.model.id !== User.current().id) {
-              return;
-            }
-            if (
-              this.storedFeaturedTopicsValue() !==
-              this.model.show_featured_topics_banner
-            ) {
-              if (this.model.show_featured_topics_banner) {
-                window.localStorage.removeItem("show_featured_topics_banner");
-              } else {
-                window.localStorage.setItem(
-                  "show_featured_topics_banner",
-                  false
-                );
+      api.modifyClass(
+        "controller:preferences/interface",
+        (Superclass) =>
+          class extends Superclass {
+            @action
+            save() {
+              super.save();
+              if (this.model.id !== User.current().id) {
+                return;
+              }
+              if (
+                this.storedFeaturedTopicsValue() !==
+                this.model.show_featured_topics_banner
+              ) {
+                if (this.model.show_featured_topics_banner) {
+                  window.localStorage.removeItem("show_featured_topics_banner");
+                } else {
+                  window.localStorage.setItem(
+                    "show_featured_topics_banner",
+                    false
+                  );
+                }
               }
             }
-          },
-        },
-      });
+          }
+      );
     });
   },
 };
