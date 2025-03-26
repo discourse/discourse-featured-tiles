@@ -1,5 +1,4 @@
-import { observer } from "@ember/object";
-import { action } from "@ember/object";
+import { action, observer } from "@ember/object";
 import { withPluginApi } from "discourse/lib/plugin-api";
 import User from "discourse/models/user";
 
