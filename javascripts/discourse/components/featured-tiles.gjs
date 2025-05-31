@@ -3,7 +3,9 @@ import { next } from "@ember/runloop";
 import { service } from "@ember/service";
 import { classNameBindings } from "@ember-decorators/component";
 import { observes } from "@ember-decorators/object";
+import PluginOutlet from "discourse/components/plugin-outlet";
 import discourseComputed from "discourse/lib/decorators";
+import FeaturedTile from "./featured-tile";
 
 const displayCategories = settings.display_categories
   .split("|")
@@ -111,4 +113,20 @@ export default class FeaturedTiles extends Component {
     }
     return false;
   }
+
+  <template>
+    {{#if this.shouldDisplay}}
+      <div class="featured-tiles-container">
+        {{#each this.filteredTopics as |topic|}}
+          <FeaturedTile @topic={{topic}} />
+        {{/each}}
+      </div>
+
+      <PluginOutlet
+        @name="below-featured-tiles"
+        @tagName=""
+        @connectorTagName="div"
+      />
+    {{/if}}
+  </template>
 }
