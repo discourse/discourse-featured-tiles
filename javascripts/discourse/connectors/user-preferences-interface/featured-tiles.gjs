@@ -1,7 +1,6 @@
 import Component from "@ember/component";
 import { classNames } from "@ember-decorators/component";
 import PreferenceCheckbox from "discourse/components/preference-checkbox";
-import themePrefix from "discourse/helpers/theme-prefix";
 import User from "discourse/models/user";
 import { i18n } from "discourse-i18n";
 
