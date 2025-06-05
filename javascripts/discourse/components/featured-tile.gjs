@@ -1,5 +1,7 @@
 import Component from "@ember/component";
 import { classNames } from "@ember-decorators/component";
+import UserLink from "discourse/components/user-link";
+import avatar from "discourse/helpers/avatar";
 import discourseComputed from "discourse/lib/decorators";
 
 @classNames("featured-tile")
@@ -66,4 +68,28 @@ export default class FeaturedTile extends Component {
       ? topic.urlForPostNumber(topic.linked_post_number)
       : topic.get("lastUnreadUrl");
   }
+
+  <template>
+    <a href={{this.url}}>
+      {{#if this.topic.thumbnails}}
+        <img
+          src={{this.fallbackSrc}}
+          srcset={{this.srcset}}
+          width={{this.width}}
+          height={{this.height}}
+          loading="lazy"
+          class="topic-tile-thumbnail"
+        />
+      {{/if}}
+
+      <div class="topic-info">
+        <span class="topic-title">{{this.topic.title}}</span>
+        <span class="author">
+          <UserLink @user={{this.topic.creator}}>
+            {{avatar this.topic.creator imageSize="large"}}
+          </UserLink>
+        </span>
+      </div>
+    </a>
+  </template>
 }
