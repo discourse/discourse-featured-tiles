@@ -6,7 +6,7 @@ export default {
   name: "discourse-featured-tiles",
 
   initialize() {
-    withPluginApi("0.8.9", (api) => {
+    withPluginApi((api) => {
       api.modifyClass("controller:preferences/interface", {
         pluginId: this.name,
 
