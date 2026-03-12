@@ -1,10 +1,11 @@
+/* eslint-disable ember/no-classic-components, ember/no-observers, ember/require-tagless-components */
 import Component from "@ember/component";
+import { computed } from "@ember/object";
 import { next } from "@ember/runloop";
 import { service } from "@ember/service";
 import { classNameBindings } from "@ember-decorators/component";
 import { observes } from "@ember-decorators/object";
 import PluginOutlet from "discourse/components/plugin-outlet";
-import discourseComputed from "discourse/lib/decorators";
 import FeaturedTile from "./featured-tile";
 
 const displayCategories = settings.display_categories
@@ -71,8 +72,9 @@ export default class FeaturedTiles extends Component {
       });
   }
 
-  @discourseComputed("list.topics")
-  filteredTopics(topics) {
+  @computed("list.topics")
+  get filteredTopics() {
+    let topics = this.list?.topics;
     if (!topics) {
       return;
     }
@@ -82,34 +84,30 @@ export default class FeaturedTiles extends Component {
     return topics.slice(0, settings.maximum_topic_count);
   }
 
-  @discourseComputed(
-    "site.mobileView",
-    "category.id",
-    "router.currentRouteName"
-  )
-  shouldDisplay(isMobile, viewingCategoryId, currentRouteName) {
+  @computed("site.mobileView", "category.id", "router.currentRouteName")
+  get shouldDisplay() {
     if (
       ![
         "discovery.latest",
         "discovery.categories",
         "discovery.category",
-      ].includes(currentRouteName)
+      ].includes(this.router?.currentRouteName)
     ) {
       return false;
     }
 
-    if (isMobile && !settings.display_mobile) {
+    if (this.site?.mobileView && !settings.display_mobile) {
       return false;
     }
-    if (settings.display_when_unfiltered && !viewingCategoryId) {
+    if (settings.display_when_unfiltered && !this.category?.id) {
       return true;
     }
 
-    if (settings.display_on_categories && viewingCategoryId) {
+    if (settings.display_on_categories && this.category?.id) {
       if (displayCategories.length === 0) {
         return true;
       }
-      return displayCategories.includes(viewingCategoryId);
+      return displayCategories.includes(this.category?.id);
     }
     return false;
   }

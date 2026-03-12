@@ -1,3 +1,4 @@
+/* eslint-disable ember/no-observers */
 import { action, observer } from "@ember/object";
 import { withPluginApi } from "discourse/lib/plugin-api";
 import User from "discourse/models/user";
@@ -11,7 +12,6 @@ export default {
         pluginId: this.name,
 
         updateShowFeaturedTopicsBanner: observer("model.id", function () {
-          // debugger;
           if (this.model.id !== User.current().id) {
             return;
           }

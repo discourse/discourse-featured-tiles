@@ -1,8 +1,9 @@
+/* eslint-disable ember/no-classic-components, ember/require-tagless-components */
 import Component from "@ember/component";
+import { computed } from "@ember/object";
 import { classNames } from "@ember-decorators/component";
 import UserLink from "discourse/components/user-link";
 import avatar from "discourse/helpers/avatar";
-import discourseComputed from "discourse/lib/decorators";
 
 @classNames("featured-tile")
 export default class FeaturedTile extends Component {
@@ -10,8 +11,8 @@ export default class FeaturedTile extends Component {
   displayHeight = 200;
   displayWidth = 200;
 
-  @discourseComputed("topic.thumbnails")
-  srcset() {
+  @computed("topic.thumbnails")
+  get srcset() {
     return this.responsiveRatios
       .map((ratio) => {
         const match = this.findBest(
@@ -23,23 +24,23 @@ export default class FeaturedTile extends Component {
       .join(",");
   }
 
-  @discourseComputed("topic.thumbnails")
-  original(thumbnails) {
-    return thumbnails[0];
+  @computed("topic.thumbnails")
+  get original() {
+    return this.topic?.thumbnails?.[0];
   }
 
-  @discourseComputed("original")
-  width(original) {
-    return original.width;
+  @computed("original")
+  get width() {
+    return this.original.width;
   }
 
-  @discourseComputed("original")
-  height(original) {
-    return original.height;
+  @computed("original")
+  get height() {
+    return this.original.height;
   }
 
-  @discourseComputed("topic.thumbnails")
-  fallbackSrc() {
+  @computed("topic.thumbnails")
+  get fallbackSrc() {
     return this.findBest(this.displayWidth, this.displayHeight).url;
   }
 
@@ -62,11 +63,11 @@ export default class FeaturedTile extends Component {
     return this.original;
   }
 
-  @discourseComputed("topic")
-  url(topic) {
-    return topic.linked_post_number
-      ? topic.urlForPostNumber(topic.linked_post_number)
-      : topic.get("lastUnreadUrl");
+  @computed("topic")
+  get url() {
+    return this.topic.linked_post_number
+      ? this.topic.urlForPostNumber(this.topic.linked_post_number)
+      : this.topic.get("lastUnreadUrl");
   }
 
   <template>
