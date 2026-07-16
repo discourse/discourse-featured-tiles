@@ -56,8 +56,9 @@ export default class FeaturedTile extends Component {
       return t.max_width >= maxHeight;
     });
 
-    if (largeEnough.lastObject) {
-      return largeEnough.lastObject;
+    const largest = largeEnough.at(-1);
+    if (largest) {
+      return largest;
     }
 
     return this.original;
