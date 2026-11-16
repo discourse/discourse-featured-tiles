@@ -2,7 +2,6 @@
 import Component from "@ember/component";
 import { computed } from "@ember/object";
 import { classNames } from "@ember-decorators/component";
-import UserLink from "discourse/components/user-link";
 import avatar from "discourse/helpers/avatar";
 
 @classNames("featured-tile")
@@ -87,9 +86,7 @@ export default class FeaturedTile extends Component {
       <div class="topic-info">
         <span class="topic-title">{{this.topic.title}}</span>
         <span class="author">
-          <UserLink @user={{this.topic.creator}}>
-            {{avatar this.topic.creator imageSize="large"}}
-          </UserLink>
+          {{avatar this.topic.creator imageSize="large"}}
         </span>
       </div>
     </a>
